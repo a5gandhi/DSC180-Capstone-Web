@@ -5,10 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/layui/css/layui.css">
-    <base href = "http://localhost:8080/python/">
-    <!-- <base href = "https://white-wildflower-6469.fly.dev/python/"> -->
 </head>
-
 <style>
     .layui-container{
         text-align: center;
@@ -18,7 +15,6 @@
         margin-top: 10px;
     }
 </style>
-
 <body>
 <script src="lib/layui/layui.js"></script>
 <script src="js/jquery.js"></script>
@@ -27,13 +23,8 @@
         var websocket;
         if('WebSocket' in window) {
             console.log("The browser support websocket");
-            websocket = new WebSocket("ws://localhost:8080/python/websocket");
-            // websocket = new WebSocket("wss://white-wildflower-6469.fly.dev/python/websocket");
-
-            var baseElem = document.getElementsByTagName('base')[0];
-            var currBaseHrefValue = baseElem.getAttribute('href');
-            currBaseHrefValue + 'run'
-            websocket = new WebSocket(currBaseHrefValue + 'websocket')
+            // websocket = new WebSocket("ws://localhost:8080/python/websocket");
+            websocket = new WebSocket("wss://white-wildflower-6469.fly.dev/python/websocket");
 
         } else if('MozWebSocket' in window) {
             alert("The browser support MozWebSocket");
@@ -103,10 +94,8 @@
         </div>
         <div class="layui-col-md2 layui-col-md-offset1">
             <div class="layui-result">
-                <!-- <button type="button" class="layui-btn layui-btn-primary" onclick="location.href='https://white-wildflower-6469.fly.dev/python/result';">Check the results</button> -->
+                <button type="button" class="layui-btn layui-btn-primary" onclick="location.href='https://white-wildflower-6469.fly.dev/python/result';">Check the results</button>
                 <!-- <button type="button" class="layui-btn layui-btn-primary" onclick="location.href='http://localhost:8080/python/result';">Check the results</button> -->
-                
-                <button type="button" class="layui-btn layui-btn-primary" onclick="location.href = document.getElementsByTagName('base')[0].getAttribute('href') + 'result';">Check the results</button>
             </div>
         </div>
     </div>
