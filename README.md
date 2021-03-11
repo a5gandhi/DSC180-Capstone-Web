@@ -27,7 +27,8 @@ OR
 
 Visit our website:
 
-https://white-wildflower-6469.fly.dev/python/
+http://35.223.187.250:8080/python
+
 
 
 
