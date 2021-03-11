@@ -23,8 +23,8 @@
         var websocket;
         if('WebSocket' in window) {
             console.log("The browser support websocket");
-            // websocket = new WebSocket("ws://localhost:8080/python/websocket");
-            websocket = new WebSocket("wss://white-wildflower-6469.fly.dev/python/websocket");
+            websocket = new WebSocket("ws://localhost:8080/python/websocket");
+            // websocket = new WebSocket("wss://white-wildflower-6469.fly.dev/python/websocket");
 
         } else if('MozWebSocket' in window) {
             alert("The browser support MozWebSocket");
@@ -94,8 +94,8 @@
         </div>
         <div class="layui-col-md2 layui-col-md-offset1">
             <div class="layui-result">
-                <button type="button" class="layui-btn layui-btn-primary" onclick="location.href='https://white-wildflower-6469.fly.dev/python/result';">Check the results</button>
-                <!-- <button type="button" class="layui-btn layui-btn-primary" onclick="location.href='http://localhost:8080/python/result';">Check the results</button> -->
+                <!-- <button type="button" class="layui-btn layui-btn-primary" onclick="location.href='https://white-wildflower-6469.fly.dev/python/result';">Check the results</button> -->
+                <button type="button" class="layui-btn layui-btn-primary" onclick="location.href='http://localhost:8080/python/result';">Check the results</button>
             </div>
         </div>
     </div>
