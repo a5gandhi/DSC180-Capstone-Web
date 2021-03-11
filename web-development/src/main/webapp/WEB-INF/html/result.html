@@ -134,7 +134,6 @@
             </textarea>
         </div>
     </div>
-    <br>
 
 
     <!-- GRAPH - length distribution -->
@@ -142,7 +141,7 @@
         <div class="layui-col-md6">
                 <img id = "img5"/>
         </div>
-        <div class="layui-col-md6" style="margin-top: 60px">
+        <div class="layui-col-md6">
             <p style = "font-size: 16px; text-align: right">
                 This graph shows the distribution of sentence length in the input text corpus
             </p>
@@ -155,7 +154,7 @@
         <div class="layui-col-md6">
                 <img id = "img1"/>
         </div>
-        <div class="layui-col-md6" style="margin-top: 60px">
+        <div class="layui-col-md6">
             <p style = "font-size: 16px; text-align: right">
                 Obtained from the tokenizer model, the graph here shows the distribution of token frequency
             </p>
@@ -168,7 +167,7 @@
         <div class="layui-col-md6">
                 <img id = "img2"/>
         </div>
-        <div class="layui-col-md6" style="margin-top: 60px">
+        <div class="layui-col-md6">
             <p style = "font-size: 16px; text-align: right">
                 These are the top 20 words obtained upon tokenization
             </p>
@@ -201,7 +200,7 @@
 
     <div class="layui-row">
         <div class="layui-col-md6 layui-col-md-offset3">
-            <p style="color: grey; font-size: 18px">
+            <p style="color: grey;">
                 The word cloud above illustrates the most common and relevant words in your input file. The larger the word, the higher its frequency and importance.
             </p>
         </div>
@@ -211,7 +210,7 @@
 
     <!-- TABLE - autophrase -->
     <div class="layui-row">
-        <div class="layui-col-md6" style="margin-top: 60px">
+        <div class="layui-col-md6">
             <p style = "font-size: 16px; text-align: left">
                 The main result from the AutoPhrase algorithm, this table shows scores of single- and multi-word phrases with their corresponding phrase quality scores.
             </p>
@@ -226,7 +225,7 @@
 
     <!-- GRAPH - single vs multi-word distribution -->
     <div class="layui-row">
-        <div class="layui-col-md6" style="margin-top: 60px">
+        <div class="layui-col-md6">
             <p style = "font-size: 16px; text-align: left">
                 A comparison between the quality score distributions of single-word and multi-word phrases 
             </p>
@@ -239,7 +238,7 @@
 
     <!-- GRAPH - frequency vs score scatterplot -->
     <div class="layui-row">
-        <div class="layui-col-md6" style="margin-top: 60px">
+        <div class="layui-col-md6">
             <p style = "font-size: 16px; text-align: left">
                 This simple scatter plot shows the top 20 unigrams (based on quality score) with respect to their frequency in the text corpus.
             </p>
@@ -248,13 +247,12 @@
             <img id = "img8"/>
         </div>
     </div>
-    <br>
 
 
     <!-- TABLE - tfidf all  -->
     <div class="layui-row">
         <div class="layui-col-md6">
-            <p style = "font-size: 16px; text-align: left" style="margin-top: 30px">
+            <p style = "font-size: 16px; text-align: left">
                 tf-idf, an information retrieval and text mining method, evaluates how relevant a word is in a corpus. 
                 The tf–idf value increases proportionally to the number of times a word appears in the document and is offset by the number of documents in the corpus that contain the word, which helps to adjust for the fact that some words appear more frequently in general. 
                 For example, words such as “that”, “with”, “to” (also known as stop words) are ignored, since they are meaningless in the context of the entire corpus.
@@ -272,7 +270,7 @@
 
     <!-- TABLE - multiplication all -->
     <div class="layui-row">
-        <div class="layui-col-md6" style="margin-top: 60px">
+        <div class="layui-col-md6">
             <p style = "font-size: 16px; text-align: left">
                 This list shows a metric obtained by simply multiplying the quality score of a phrase by its tfidf score.
             </p>
@@ -289,14 +287,14 @@
     <div class="layui-row">
         <div class="layui-col-md12">
             <h3> Segmentation text </h3>
-            <textarea cols="40" rows="10x" id="seg" disabled="disabled" class="layui-textarea" style="border: none">
+            <textarea cols="40" rows="5x" id="seg" disabled="disabled" class="layui-textarea" style="border: none">
             </textarea>
         </div>
     </div>
 
     <div class="layui-row">
         <div class="layui-col-md6 layui-col-md-offset3">
-            <p style="color: grey; font-size: 18px">
+            <p style="color: grey">
                 This text file is an intermediate output from the AutoPhrase algorithm - it separates the phrases in your input corpus (as shown), and uses these phrases to then calculate quality score.
             </p>
         </div>
@@ -304,7 +302,6 @@
 
 
     <!-- SECTION BREAK-->
-    <br>
     <br>
 
 
@@ -323,7 +320,7 @@
         <div class="layui-col-md6">
                 <img id = "img3"/>
         </div>
-        <div class="layui-col-md6" style="margin-top: 60px">
+        <div class="layui-col-md6">
             <p style = "font-size: 16px; text-align: right">
                 Distribution of sentiment polarity by sentence. Here, a value of 1 means a completely positive attitude, 0 means a neutral attitude, and -1 means a completely negative attitude.
             </p>
@@ -336,7 +333,7 @@
         <div class="layui-col-md6">
             <img id = "img4"/>
         </div>
-        <div class="layui-col-md6" style="margin-top: 60px">
+        <div class="layui-col-md6">
             <p style = "font-size: 16px; text-align: right">
                 Distribution of sentiment subjectivity by sentence. Here, a value of 0 means completely objective whereas 1 means completely subjective.
             </p>
