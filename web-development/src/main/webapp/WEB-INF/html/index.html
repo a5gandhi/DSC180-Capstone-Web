@@ -6,7 +6,11 @@
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/layui/css/layui.css">
+    <base href = "http://localhost:8080/python/">
+    <!-- <base href = "https://white-wildflower-6469.fly.dev/python/"> -->
+
 </head>
+
 <style>
     .layui-container{
         text-align: center;
@@ -15,6 +19,7 @@
         margin-bottom: 10px;
     }
 </style>
+
 <body>
 <script src="lib/layui/layui.js"></script>
 <script src="js/jquery.js"></script>
@@ -55,8 +60,7 @@
             }
         });
         $("#run").on('click',function () {
-            if(files == null)
-            {
+            if(files == null) {
                 layer.open({
                     content: 'please select a .txt file'
                     , btn: ['OK']
@@ -66,10 +70,11 @@
                     , cancel: function () {
                     }
                 });
-            } else
-            {
-                // window.location.href='http://localhost:8080/python/run';
-                window.location.href = 'https://white-wildflower-6469.fly.dev/python/run';
+            } 
+            else {
+                var baseElem = document.getElementsByTagName('base')[0];
+                var currBaseHrefValue = baseElem.getAttribute('href');
+                window.location.href = currBaseHrefValue + 'run';
             }
         });
     });
