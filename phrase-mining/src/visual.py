@@ -149,11 +149,11 @@ def visual(input, output, out_dir,input_path,file,autophrase,multi_word,single_w
         #multiplication top 20 multi
         haha = {}
         ds_dict = ds.Score.to_dict()
-        res1_dict = res1.Score.to_dict()
+        res2_dict = res2.Score.to_dict()
 
         for key in ds_dict:
             try:
-                value = ds_dict[key] * res1_dict[key]
+                value = ds_dict[key] * res2_dict[key]
                 haha[key] = value
             except:
                 pass
@@ -194,11 +194,11 @@ def visual(input, output, out_dir,input_path,file,autophrase,multi_word,single_w
         print('frequency vs score dataframe done')
 
         plt.title('Word Frequency vs AutoPhrase Score')
-        plt.xlabel('Log-Scaled Score')
+        plt.xlabel('Quality Score')
         plt.ylabel('Frequency')
 
         for index, row in single_top_20.iterrows():
-            plt.text(x = math.log(row.value),
+            plt.text(x = row.value,
                     y = row.frequency,
                     s = row.phrase,
                     size = 5,
